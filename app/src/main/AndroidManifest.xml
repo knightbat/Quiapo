@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ltrix.jk.quiapo" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:protectionLevel="signature" android:name="com.ltrix.jk.quiapo.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.ltrix.jk.quiapo.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat"
+        android:name=".ParseInitialization">
+        <activity
+            android:name="com.ltrix.jk.quiapo.LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ltrix.jk.quiapo.ProviderListActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.ltrix.jk.quiapo.MainActivity"/>
+        <activity android:name="com.ltrix.jk.quiapo.CartActivity"/>
+        <activity android:name="com.ltrix.jk.quiapo.AdminActivity"/>
+        <activity android:name="com.ltrix.jk.quiapo.AdminSubActivity"/>
+        <activity android:name="com.ltrix.jk.quiapo.RequestStatusActivity"/>
+        <activity android:name="com.ltrix.jk.quiapo.RequestStatusSubActivity"/>
+        <activity android:name="com.ltrix.jk.quiapo.ManageUserActivity"/>
+        <activity android:name="com.ltrix.jk.quiapo.ChangePasswordActivity"/>
+        <activity android:name="com.ltrix.jk.quiapo.PaymentHistoryActivity"/>
+
+
+
+        <!--
+
+        for parse push
+
+         -->
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.ltrix.jk.quiapo" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

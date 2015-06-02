@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/confirm_order_cell"
+    android:paddingTop="3dp"
+    android:layout_weight="5"
+    >
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="sawa"
+        android:id="@+id/textView2"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="#ffffff"
+
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="500p"
+        android:id="@+id/textView3"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#ffffff"
+
+        />
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="x"
+        android:id="@+id/textViewX"
+        android:textColor="#ffffff"
+
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="3"
+        android:id="@+id/textView4"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="#ffffff"
+
+        />
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/confirm_order_delete"
+        android:background="@null"
+        android:id="@+id/delete_button"
+        android:layout_weight="1"
+
+        />
+
+
+</LinearLayout>

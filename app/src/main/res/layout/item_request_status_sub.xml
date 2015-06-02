@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/confirm_order_cell"
+    android:weightSum="3"
+    android:layout_marginTop="10dp"
+    >
+
+
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/tvRequest"
+        android:gravity="left"
+        android:layout_marginLeft="10dp"
+
+        />
+
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" : "
+        android:id="@+id/textView5"
+        android:gravity="center" />
+
+    <TextView
+        android:textColor="#ffffff"
+
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Small Text"
+        android:id="@+id/tvQuantity"
+        android:gravity="center" />
+</LinearLayout>
