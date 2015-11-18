@@ -17,7 +17,7 @@ public class ParseInitialization extends Application {
     @Override
     public void onCreate() {
         Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "aSGl0iNrVj9DVQRpU8dd3KUAtD0Ucrd8Ru1IgRa5", "faDg9p901a0TLsVbuTauMUCwvQUBHmtuhJWLk61S");
+        Parse.initialize(this, "baLV0ZB1rdYRIKcYYToLRTi7PC1fFqOTJgIgVU6j", "62yLgmACiCYIGCoYqvnh4P3oVTittwOLdWgoEGq7");
 
 
         ParsePush.subscribeInBackground("common", new SaveCallback() {
